@@ -17,7 +17,6 @@ def main():
         """,
         unsafe_allow_html=True
     )
-
     # Sidebar navigation with customized radio buttons
     st.sidebar.title("Intelli Trader")
     page = st.sidebar.radio(
