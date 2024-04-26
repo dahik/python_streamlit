@@ -35,6 +35,7 @@ google-pasta
 grpcio
 h5netcdf
 h5py
+prophet
 hijri-converter
 holidays==0.9.12
 html5lib
