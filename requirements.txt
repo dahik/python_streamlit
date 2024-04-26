@@ -19,6 +19,7 @@ convertdate
 cssselect
 cycler
 Cython
+holidays
 ephem
 fake-useragent
 filelock
