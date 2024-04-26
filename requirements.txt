@@ -39,7 +39,7 @@ h5py==3.11.0
 hijri-converter==2.3.1
 holidays==0.24
 html5lib==1.1
-huggingface-hub==0.22.2
+huggingface-hub
 idna==3.7
 importlib-metadata==7.1.0
 importlib-resources==6.4.0
