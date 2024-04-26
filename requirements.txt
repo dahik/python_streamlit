@@ -21,7 +21,6 @@ cycler
 Cython
 ephem
 fake-useragent
-fbprophet
 filelock
 flatbuffers
 fonttools
@@ -64,6 +63,7 @@ multitasking
 munkres
 networkx
 numpy
+fbprophet==0.7.1
 oauthlib
 opt-einsum
 packaging
