@@ -62,6 +62,7 @@ mpmath
 multitasking
 munkres
 networkx
+pyproject-toml
 numpy
 fbprophet==0.7.1
 oauthlib
