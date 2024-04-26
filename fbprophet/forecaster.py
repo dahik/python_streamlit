@@ -14,7 +14,7 @@ from datetime import timedelta, datetime
 import numpy as np
 import pandas as pd
 
-from fbprophet.make_holidays import get_holiday_names, make_holidays_df
+# from fbprophet.make_holidays import get_holiday_names, make_holidays_df
 from fbprophet.models import StanBackendEnum
 from fbprophet.plot import (plot, plot_components)
 
@@ -219,12 +219,12 @@ class Prophet(object):
             raise ValueError(
                 'Name {name!r} already used for a holiday.'.format(name=name)
             )
-        if (check_holidays and self.country_holidays is not None and
-                name in get_holiday_names(self.country_holidays)):
-            raise ValueError(
-                'Name {name!r} is a holiday name in {country_holidays}.'
-                .format(name=name, country_holidays=self.country_holidays)
-            )
+        # if (check_holidays and self.country_holidays is not None and
+        #         name in get_holiday_names(self.country_holidays)):
+        #     raise ValueError(
+        #         'Name {name!r} is a holiday name in {country_holidays}.'
+        #         .format(name=name, country_holidays=self.country_holidays)
+        #     )
         if check_seasonalities and name in self.seasonalities:
             raise ValueError(
                 'Name {name!r} already used for a seasonality.'
@@ -480,14 +480,14 @@ class Prophet(object):
         all_holidays = pd.DataFrame()
         if self.holidays is not None:
             all_holidays = self.holidays.copy()
-        if self.country_holidays is not None:
-            year_list = list({x.year for x in dates})
-            country_holidays_df = make_holidays_df(
-                year_list=year_list, country=self.country_holidays
-            )
-            all_holidays = pd.append((all_holidays, country_holidays_df),
-                                     sort=False)
-            all_holidays.reset_index(drop=True, inplace=True)
+        # if self.country_holidays is not None:
+        #     year_list = list({x.year for x in dates})
+        #     country_holidays_df = make_holidays_df(
+        #         year_list=year_list, country=self.country_holidays
+        #     )
+        #     all_holidays = pd.append((all_holidays, country_holidays_df),
+        #                              sort=False)
+        #     all_holidays.reset_index(drop=True, inplace=True)
         # Drop future holidays not previously seen in training data
         if self.train_holiday_names is not None:
             # Remove holiday names didn't show up in fit
@@ -721,10 +721,10 @@ class Prophet(object):
                 "Country holidays must be added prior to model fitting."
             )
         # Validate names.
-        for name in get_holiday_names(country_name):
-            # Allow merging with existing holidays
-            self.validate_column_name(name, check_holidays=False)
-        # Set the holidays.
+        # for name in get_holiday_names(country_name):
+        #     # Allow merging with existing holidays
+        #     self.validate_column_name(name, check_holidays=False)
+        # # Set the holidays.
         if self.country_holidays is not None:
             logger.warning(
                 'Changing country holidays from {country_holidays!r} to '
