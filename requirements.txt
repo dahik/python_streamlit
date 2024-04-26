@@ -112,7 +112,7 @@ soupsieve==2.5
 streamlit==1.33.0
 sympy==1.12
 tenacity==8.2.3
-typing-extensions==4.8.0
+typing-extensions
 tensorboard==2.13.0
 tensorboard-data-server==0.7.2
 tensorflow==2.13.0
