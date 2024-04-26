@@ -10,6 +10,13 @@ import warnings
 from calendar import Calendar, MONDAY
 from datetime import date, timedelta
 
+# Import Entity class from holidays.countries module
+from holidays.countries import Entity
+
+# Or import Entity class from holidays.financial module
+# from holidays.financial import Entity
+
+
 from convertdate.islamic import from_gregorian, to_gregorian
 from lunarcalendar import Lunar, Converter
 from lunarcalendar.converter import DateNotExist
