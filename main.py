@@ -3,7 +3,7 @@ from datetime import date
 
 import yfinance as yf
 from prophet import Prophet
-from fbprophet.plot import plot_plotly
+#from fbprophet.plot import plot_plotly
 from plotly import graph_objs as go
 
 def predictionBasedOnData():
@@ -56,18 +56,18 @@ def predictionBasedOnData():
     st.write(forecast.tail())
 
     st.write(f'Forecast plot for {n_years} years')
-    fig1 = plot_plotly(m, forecast)
-    fig1.update_layout(
-    autosize=True,
-    margin=dict(
-        l=0,
-        r=120,
-        b=100,
-        t=100,
-        pad=4
-    )
-    )
-    st.plotly_chart(fig1)
+    # fig1 = plot_plotly(m, forecast)
+    # fig1.update_layout(
+    # autosize=True,
+    # margin=dict(
+    #     l=0,
+    #     r=120,
+    #     b=100,
+    #     t=100,
+    #     pad=4
+    # )
+    # )
+    # st.plotly_chart(fig1)
 
     st.write("Forecast components")
     fig2 = m.plot_components(forecast)
