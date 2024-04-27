@@ -70,7 +70,10 @@ class CmdStanPyBackend(IStanBackend):
     def load_model(self):
         import cmdstanpy
         model_file = "prophet/stan_model/prophet_model.bin"
-        return cmdstanpy.CmdStanModel(exe_file=str(model_file))
+        import pickle
+        with open(model_file, 'rb') as f:
+            stan_model = pickle.load(f)
+        return cmdstanpy.CmdStanModel(exe_file=str(stan_model))
 
     def fit(self, stan_init, stan_data, **kwargs):
         if 'inits' not in kwargs and 'init' in kwargs:
