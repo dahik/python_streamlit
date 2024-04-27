@@ -153,7 +153,7 @@ class Prophet(object):
         else:
             self.stan_backend = StanBackendEnum.get_backend_class(stan_backend)()
 
-            logger.debug("Loaded stan backend: %s", self.stan_backend.get_type())
+        logger.debug("Loaded stan backend: %s", self.stan_backend.get_type())
 
     def validate_inputs(self):
         """Validates the inputs to Prophet."""
