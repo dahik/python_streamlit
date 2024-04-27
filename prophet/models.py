@@ -69,7 +69,7 @@ class CmdStanPyBackend(IStanBackend):
 
     def load_model(self):
         import cmdstanpy
-        model_file = importlib_resources.files("prophet") / "stan_model" / "prophet_model.bin"
+        model_file = "prophet/stan_model/prophet_model.bin"
         return cmdstanpy.CmdStanModel(exe_file=str(model_file))
 
     def fit(self, stan_init, stan_data, **kwargs):
