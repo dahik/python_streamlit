@@ -12,7 +12,7 @@ cachetools
 certifi
 charset-normalizer
 click
-cmdstanpy
+cmdstanpy==2.31.0
 colorama
 contourpy
 convertdate
