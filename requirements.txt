@@ -82,6 +82,7 @@ pyasn1
 pyasn1-modules
 pydeck
 Pygments
+prophet
 PyMeeus
 pyparsing
 pyppeteer
