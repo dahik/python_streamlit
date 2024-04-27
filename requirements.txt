@@ -16,6 +16,7 @@ cmdstanpy
 colorama
 contourpy
 convertdate
+prophet
 cssselect
 cycler
 Cython
