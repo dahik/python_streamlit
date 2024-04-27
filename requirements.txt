@@ -37,7 +37,7 @@ grpcio
 h5netcdf
 h5py
 hijri-converter
-holidays==0.9.12
+holidays
 html5lib
 huggingface-hub
 idna
